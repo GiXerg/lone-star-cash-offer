@@ -1,35 +1,52 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import FloatingCTA from "./components/FloatingCTA";
 import Home from "./pages/Home";
-
+import HowItWorks from "./pages/HowItWorks";
+import About from "./pages/About";
+import Resources from "./pages/Resources";
+import InheritedHouse from "./pages/resources/InheritedHouse";
+import Foreclosure from "./pages/resources/Foreclosure";
+import AsIs from "./pages/resources/AsIs";
+import CashBuyers from "./pages/resources/CashBuyers";
+import Contact from "./pages/Contact";
 
 function Router() {
+  const [location] = useLocation();
+  const showFloatingCTA = location !== "/";
+
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Navigation />
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/how-it-works"} component={HowItWorks} />
+        <Route path={"/about"} component={About} />
+        <Route path={"/resources"} component={Resources} />
+        <Route path={"/resources/inherited"} component={InheritedHouse} />
+        <Route path={"/resources/foreclosure"} component={Foreclosure} />
+        <Route path={"/resources/as-is"} component={AsIs} />
+        <Route path={"/resources/cash-buyers"} component={CashBuyers} />
+        <Route path={"/contact"} component={Contact} />
+        <Route path={"/404"} component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+      {showFloatingCTA && <FloatingCTA />}
+      <Footer />
+    </>
   );
 }
-
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />
