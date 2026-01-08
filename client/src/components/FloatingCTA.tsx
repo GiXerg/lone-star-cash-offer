@@ -16,7 +16,7 @@ export default function FloatingCTA() {
 
   return (
     <div className="fixed right-4 bottom-6 z-40 md:right-6 md:bottom-8">
-      <div className="bg-background border-2 border-primary rounded-2xl shadow-2xl p-6 max-w-xs animate-in fade-in slide-in-from-right-4 duration-300">
+      <div className="bg-background border border-accent rounded-2xl shadow-lg p-2 max-w-[200px] animate-in fade-in slide-in-from-right-4 duration-300">
         <button
           onClick={() => setIsVisible(false)}
           className="absolute top-3 right-3 text-muted-foreground hover:text-foreground transition-colors"
@@ -25,10 +25,10 @@ export default function FloatingCTA() {
         </button>
 
         <div className="pr-6">
-          <h3 className="font-display text-lg text-foreground mb-2">
+          <h3 className="font-display text-base text-foreground mb-2">
             Ready to Sell?
           </h3>
-          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+          <p className="text-xs text-muted-foreground mb-4 leading-relaxed">
             Get a fair cash offer for your home today.
           </p>
 
