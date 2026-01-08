@@ -42,7 +42,7 @@ export default function Home() {
               </div>
             </div>
             <img
-              src="/images/trust-us.jpg"
+              src="/images/home-hero.jpg"
               alt="Lone Star Cash Offer - We Buy Houses for Cash"
               className="w-full h-[400px] object-cover rounded-2xl"
             />
@@ -175,7 +175,7 @@ export default function Home() {
               </p>
             </div>
             <img
-              src="/images/home1.jpg"
+              src="/images/trust-us.jpg"
               alt="Lone Star Cash Offer - We Buy Houses for Cash"
               className="w-full h-[400px] object-cover rounded-2xl"
             />
