@@ -163,8 +163,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-display text-xl mb-2">Email Us</h3>
-                      <a href="mailto:info@lonestarcashoffer.com" className="text-lg text-primary hover:underline break-all">
-                        info@lonestarcashoffer.com
+                      <a href="mailto:info@lonestarcashoffertx.com" className="text-lg text-primary hover:underline break-all">
+                        info@lonestarcashoffertx.com
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         We respond within 24 hours
