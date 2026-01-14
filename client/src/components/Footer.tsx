@@ -96,9 +96,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@lonestarcashoffer.com" className="flex items-start gap-2 text-sm text-background/70 hover:text-primary transition-colors">
+                <a href="mailto:info@lonestarcashoffertx.com" className="flex items-start gap-2 text-sm text-background/70 hover:text-primary transition-colors">
                   <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span>info@lonestarcashoffer.com</span>
+                  <span>info@lonestarcashoffertx.com</span>
                 </a>
               </li>
               <li>
